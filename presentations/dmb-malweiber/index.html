@@ -1,0 +1,583 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Normdaten, Wikidata, und die Malweiber</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+        <!--link rel="stylesheet" href="css/theme/black.css"-->
+        <!--link rel="stylesheet" href="css/theme/white.css"-->
+        <link rel="stylesheet" href="plugin/title-footer/title-footer.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+        
+        <!-- my adaptaions -->
+        <link rel="stylesheet" href="css/hgkuper.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+                <section data-state="no-title-footer">
+                    <a href="https://www.digis-berlin.de/"><img src="images/logos/digiS_2018.png" height="92"/></a>
+                    <h2>Normdaten, Wikidata, und die Malweiber</h2>
+                    <small><p>DMB Berliner Herbsttreffen zur Museumsdokumentation<br />2019-10-23</p></small>
+                    <p>
+                        <small>
+                            Heinz-Günter Kuper &lt;<a href="mailto:kuper@zib.de">kuper@zib.de</a>&gt;<br/>
+                            <a href="https://orcid.org/0000-0003-0743-3346">https://orcid.org/0000-0003-0743-3346</a><br/>
+                        </small>
+                    </p>
+                    <p>
+                        <a href="https://www.zib.de/"><img src="images/logos/ZIBlogo.transp.gif" height="140" style="float: left;"/></a>
+                        <img src="images/logos/SenKE_rot_quer.png" width="300" style="position:absolute; right: 0px; bottom: 50px;"/>
+                    </p>
+                </section>
+                
+                <section>
+                    <ul style="list-style-type:none">
+                        <li>Wer hat schon etwas von <strong>Wikidata</strong> gehört?</li>
+                        <li class="fragment fade-in" data-fragment-index="1">… und <strong>Wikibase</strong>?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Normdaten, …</h2>
+                        <aside class="notes">
+                            <ul>
+                                <li>Die Protagonisten vorstellen…</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>"[E]ine Normdatei [ist] ein Verzeichnis von normierten Begriffen zur Verwendung als Deskriptor in der Dokumentation."</p>
+                        <p style="font-size: small">Quelle: <a href="https://de.wikipedia.org/wiki/Normdatei">https://de.wikipedia.org/wiki/Normdatei</a></p> 
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="http://d-nb.info/gnd/7749153-1"></iframe>
+                        <p style="font-size: small">Quelle: <a href="http://d-nb.info/gnd/7749153-1">http://d-nb.info/gnd/7749153-1</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Normdatei: http://d-nb.info/gnd/4239774-1</li>
+                                <li>Vorteile: Eindeutigkeit, Qualitat (insb. bzgl. Schreibfehler) => Suchbarkeit</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <a href="https://www.dnb.de/DE/Professionell/ProjekteKooperationen/Projekte/GND4C/gnd4c.html">GND4C</a>
+                        <aside class="notes">
+                            Normdaten traditionell hauptsächlich von Bibliotheken verwendet, jetzt aber zunehmend für GLAMs im Sinne der Kulturdaten von Interesse.
+                        </aside>
+                    </section>
+                </section>   
+                
+                <section>
+                    <section>
+                        <h2>Wikidata, …</h2>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/">https://www.wikidata.org/</a></p>
+                    </section>
+                    <section>
+                        <p>Wikidata ist eine freie, gemeinsame, mehrsprachige und sekundäre Datenbank zur Sammlung strukturierter Daten zur Unterstützung von Wikipedia, Wikimedia Commons, der anderen Wikis der Wikimedia-Bewegung und jedem auf der Welt.</p>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/wiki/Wikidata:Introduction/de">https://www.wikidata.org/wiki/Wikidata:Introduction/de</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Wichtig: Mehrsprachig</li>
+                                <div style="font-size: small">
+                                <li><b>Frei:</b> Die Daten in Wikidata werden veröffentlicht unter der <a rel="nofollow" class="external text" href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication 1.0</a>, was die Weiterverwendung der Daten für viele unterschiedliche Zwecke erlaubt. Man kann die Daten kopieren, modifizieren, verteilen und auswerten, sogar für kommerzielle Zwecke, ohne eine Erlaubnis einholen zu müssen.</li>
+                                <li><b>Gemeinsam:</b> Die Daten in Wikidata werden von Wikidata-Benutzern erstellt und gepflegt, die auch die Regeln des Erstellens und Verwaltens von Inhalten in Wikidata festlegen. Auch automatische <a href="/wiki/Special:MyLanguage/Wikidata:Bots" title="Special:MyLanguage/Wikidata:Bots">Bots</a> fügen Daten in Wikidata ein.</li>
+                                <li><b>Vielsprachig:</b> Die Daten von Wikidata können in vielen Sprachen erstellt, verwendet, durchsucht und wiederverwendet werden. In jeder Sprache erstellte Daten sind sofort in allen anderen Sprachen verfügbar. Bearbeitungen sind in jeder Sprache möglich und vorgesehen.</li>
+                                <li><b>Eine sekundäre Datenbank:</b> Wikidata erfasst nicht nur Aussagen, sondern auch deren Quellen und Beziehungen zu anderen Datenbanken. Das spiegelt die Vielfältigkeit verfügbaren Wissens wider und unterstützt das Konzept der Nachweisbarkeit.</li>
+                                <li><b>Sammlung strukturierter Daten:</b> Der selbstauferlegte hohe Grad strukturierter Organisation erlaubt eine einfache Nachnutzung der Daten durch Wikimedia-Projekte und Dritte und ermöglicht Computern, sie zu verarbeiten und zu „verstehen“.</li>
+                                <li><b>Unterstützung der Wikimedia-Wikis: </b>Wikidata unterstützt Wikipedia mit leichter zu pflegenden Infoboxen und Sprachlinks, verringert so den Bearbeitungsaufwand in der Wikipedia und verbessert ihre Qualität. Aktualisierungen in einer Sprache werden allen anderen Sprachen verfügbar gemacht.</li>
+                                <li><b>Jeder auf der Welt.</b> Jeder kann Wikidata durch Verwendung des Application Programming Interface in beliebiger Anzahl unterschiedlicher Wege verwenden.</li>
+                            </div></ul>
+                        </aside>
+                    </section>
+                    <!--
+                    <section>
+                        <p><strong>Frei</strong>: Die Daten in Wikidata werden veröffentlicht unter der <strong>Creative Commons Public Domain Dedication 1.0</strong>.</p>
+                        <aside class="notes">
+                            <p>Frei: Die Daten in Wikidata werden veröffentlicht unter der Creative Commons Public Domain Dedication 1.0, was die Weiterverwendung der Daten für viele unterschiedliche Zwecke erlaubt. Man kann die Daten kopieren, modifizieren, verteilen und auswerten, sogar für kommerzielle Zwecke, ohne eine Erlaubnis einholen zu müssen.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <p><strong>Gemeinsam</strong>: Die Daten in Wikidata werden von Wikidata-Benutzern erstellt und gepflegt, die auch die Regeln des Erstellens und Verwaltens von Inhalten in Wikidata festlegen.</p>
+                        <aside class="notes">
+                            <p>Gemeinsam: Die Daten in Wikidata werden von Wikidata-Benutzern erstellt und gepflegt, die auch die Regeln des Erstellens und Verwaltens von Inhalten in Wikidata festlegen. Auch automatische Bots fügen Daten in Wikidata ein.</p>
+                            <p>Der Regelungsprozess ist allerdings komplex und etwas undurchsichtig (Wikidata-Admins).</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <p><strong>Vielsprachig</strong>: Die Daten von Wikidata können in vielen Sprachen erstellt, verwendet, durchsucht und wiederverwendet werden.</p>
+                        <aside class="notes">
+                            <p>Vielsprachig: Die Daten von Wikidata können in vielen Sprachen erstellt, verwendet, durchsucht und wiederverwendet werden. In jeder Sprache erstellte Daten sind sofort in allen anderen Sprachen verfügbar. Bearbeitungen sind in jeder Sprache möglich und vorgesehen.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <p><strong>Eine sekundäre Datenbank</strong>: Wikidata erfasst nicht nur Aussagen, sondern auch deren Quellen und <strong>Beziehungen zu anderen Datenbanken.</strong></p>
+                        <aside class="notes">
+                            <p>Eine sekundäre Datenbank: Wikidata erfasst nicht nur Aussagen, sondern auch deren Quellen und Beziehungen zu anderen Datenbanken. Das spiegelt die Vielfältigkeit verfügbaren Wissens wider und unterstützt das Konzept der Nachweisbarkeit.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <p><strong>Sammlung strukturierter Daten</strong>: Der selbstauferlegte hohe Grad strukturierter Organisation erlaubt eine einfache Nachnutzung der Daten durch Wikimedia-Projekte und Dritte und ermöglicht Computern, sie zu verarbeiten und zu „verstehen“.</p>
+                        <aside class="notes">
+                            <p>Sammlung strukturierter Daten: Der selbstauferlegte hohe Grad strukturierter Organisation erlaubt eine einfache Nachnutzung der Daten durch Wikimedia-Projekte und Dritte und ermöglicht Computern, sie zu verarbeiten und zu „verstehen“.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <p><strong>Unterstützung der Wikimedia-Wikis</strong>: Wikidata unterstützt Wikipedia mit leichter zu pflegenden Infoboxen und Sprachlinks, verringert so den Bearbeitungsaufwand in der Wikipedia und verbessert ihre Qualität. Aktualisierungen in einer Sprache werden allen anderen Sprachen verfügbar gemacht.</p>
+                        <aside class="notes">
+                            <p>Unterstützung der Wikimedia-Wikis: Wikidata unterstützt Wikipedia mit leichter zu pflegenden Infoboxen und Sprachlinks, verringert so den Bearbeitungsaufwand in der Wikipedia und verbessert ihre Qualität. Aktualisierungen in einer Sprache werden allen anderen Sprachen verfügbar gemacht.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <p><strong>Jeder auf der Welt</strong>: Jeder kann Wikidata durch Verwendung des Application Programming Interface in beliebiger Anzahl unterschiedlicher Wege verwenden.</p>
+                        <aside class="notes">
+                            <p>Jeder auf der Welt. Jeder kann Wikidata durch Verwendung des Application Programming Interface in beliebiger Anzahl unterschiedlicher Wege verwenden.</p>
+                        </aside>
+                    </section>
+                    -->
+                    <section>
+                        Datensätze, Datenobjekte und Eigenschaften.
+                    </section>
+                    <section>
+                        <p>Ein <b>Datensatz</b> (<em>entity</em>) ist der Datengehalt einer Seite in Wikidata. Es kann entweder ein Datenobjekt oder eine Eigenschaft darstellen.</p>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/wiki/Wikidata:Glossary/de">https://www.wikidata.org/wiki/Wikidata:Glossary/de</a></p>
+                    </section>
+                    <section>
+                        <p>Ein <b>Datenobjekt</b> (<em>item</em>) repräsentiert ein Gegenstand, Konzept oder Ereignis in der wirklichen Welt. Ihm wird in Wikidata einen Identifikator (äquivalent zum Namen) und Informationen zugeordnet.</p>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/wiki/Wikidata:Glossary/de">https://www.wikidata.org/wiki/Wikidata:Glossary/de</a></p>
+                    </section>
+                    <section>
+                        <p>Eine <b>Eigenschaft</b> (<em>property</em>) ist eine Beschreibung für einen Wert oder eine andere Verbindung zu einem zusammengesetzten oder möglicherweise fehlenden Wert, aber nicht der Wert selbst.</p>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/wiki/Wikidata:Glossary/de">https://www.wikidata.org/wiki/Wikidata:Glossary/de</a></p>
+                    </section>
+                    <section>
+                        <img src="images/Datensatz.png" alt="Datensatz-Datenobjekt-Eigenschaft" />
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Datamodel_in_Wikidata_de.svg/905px-Datamodel_in_Wikidata_de.svg.png"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Datamodel_in_Wikidata_de.svg/905px-Datamodel_in_Wikidata_de.svg.png">https://w.wiki/AG3</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Bezeichnung</li>
+                                <li>Beschreibung</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <!--
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Q36524"></iframe>
+                        <small>Quelle: <a href="https://www.wikidata.org/wiki/Q36524">https://www.wikidata.org/wiki/Q36524</a></small>
+                        <aside class="notes">
+                            Normdatei in Wikidata (mit diversen Sprachvarianten.)
+                        </aside>
+                    </section>
+                    -->
+                    <!--
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Q27037759"></iframe>
+                        <small>Quelle: <a href="https://www.wikidata.org/wiki/Q27037759">Q27037759</a></small>
+                    </section>
+                    -->
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Q2013"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/wiki/Q2013">https://www.wikidata.org/wiki/Q2013</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Natürlich hat Wikidata auch einen Eintrag in Wikidata.</li>
+                                <li>Warum "Q"? => nächste Folie</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Q43649390"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/wiki/Q43649390">https://www.wikidata.org/wiki/Q43649390</a></p>
+                    </section>
+                    <aside class="notes">
+                            <ul>
+                                <li>Qamarniso Vrandečić</li>
+                            </ul>
+                        </aside>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>… und die Malweiber</h2>
+                    </section>
+                    <section>
+                        <img src="images/Stadt_der_Frauen.png" height="580" />
+                        <p style="font-size: small">Quelle: <a href="https://www.stadtmuseum.de/ausstellungen/berlin-stadt-der-frauen">https://www.stadtmuseum.de/ausstellungen/berlin-stadt-der-frauen</a></p>
+                        <aside class="notes">
+                            Sonderaustellung in 2016.
+                        </aside>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.digis-berlin.de/projektpartner/archiv/archiv2016/#tab-tab-4243-2-0-0-4243-11"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://www.digis-berlin.de/projektpartner/archiv/archiv2016/">https://www.digis-berlin.de/projektpartner/archiv/archiv2016/</a></p>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Wikidata:Dataset_Imports/Previous_version_discussions#Berliner_Malweiber"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://www.wikidata.org/wiki/Wikidata:Dataset_Imports/Previous_version_discussions#Berliner_Malweiber">https://w.wiki/ALC</a></p>
+                        <aside class="notes">
+                            Click through to Google Doc
+                        </aside>
+                    </section>
+                    <section>
+                        <a href="https://w.wiki/ALP">https://w.wiki/ALP</a>
+                    </section>
+                    <section>
+                        <h4>Künstlerinnen ohne GND-ID</h4>
+                        <iframe class="stretch" data-src="https://w.wiki/ALi"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://w.wiki/ALi">https://w.wiki/ALi</a></p>
+                        <aside class="notes">
+                            19 Künstlerinnen
+                        </aside>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <p>digiS unterstützt Institutionen dabei, das <strong>Berliner Kulturerbe digital dauerhaft verfügbar</strong>, öffentlich <strong>zugänglich</strong> und für alle <strong>nachnutzbar</strong> zu machen.</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Dies beinhaltet den Aufbau von Services ebenso wie entsprechende Forschungsaktivitäten.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>Klassischer Weg:<br />Nachweis in der Deutschen Digitalen Bibliothek<br />(und ggf. in Europeana).</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>digiS untersucht neue Möglichkeiten für die Bereitstellung von Metadaten und Daten.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>Es geht nicht nur um die Präsentation von Daten auf einer Website,…</p>
+                    </section>
+                    <section>
+                        <p>… aber auch um die Verfügbarmachung von Daten für maschinelle Verarbeitung (insb. für die Suche).</p>
+                    </section>
+                    <section>
+                        <p>Und wer soll das bitte machen?!</p>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://de.wikipedia.org/wiki/Chief_Data_Officer"></iframe>
+                        <aside class="notes">
+                            <ul>
+                                <li>Marco Klindt: "der digitale Hausmeister"</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="images/1024px-Rainbow_Rose_%283366550029%29.jpg" width="900" style="margin: 0; padding: 0; border: 0;" />
+                        <div style="font-size: x-small; text-align: right;"><a href="https://commons.wikimedia.org/wiki/File:Rainbow_Rose_(3366550029).jpg">Lucy Roberts from Bartlesville, OK<br />via Wikimedia Commons</a> <a href="https://creativecommons.org/licenses/by/2.0">[CC BY 2.0]</a></div>
+                        <aside class="notes">
+                            A rose by any other name would smell as sweet (https://en.wikipedia.org/wiki/A_rose_by_any_other_name_would_smell_as_sweet)
+                        </aside>
+                    </section>
+                    <section>
+                        <ul>
+                            <li><strong>Data Governance</strong>: Steuerung der Datenverwendung</li>
+                            <li><strong>Data Architecture</strong>: Konzeption und Planung der Datenquellen und Datenkonsumenten</li>
+                            <li><strong>Data Quality</strong>: Sicherstellung der inhaltlichen Qualität der Daten</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>Stellt technische Kompetenzen und Datenkompetenz voraus</li>
+                                <li>Gespür für mögliche Nutzungsarten (Forschung, Museum Guides, etc.)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Datenqualität</h3>
+                        <p style="float: left;">Dafür Sorge tragen, dass bei diversen BearbeiterInnen bspw.</p>
+                        <ul>
+                            <li>einheitliche Maßangaben und</li>
+                            <li>kontrollierte Vokabulare</li>
+                        </ul>
+                        <p>Verwendung finden unter Beachtung von Standards.</p>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>Wikibase</h2>
+                    </section>
+                    <section>
+                        <img src="images/Wikibase_wbkgnd.png" height="600"/>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://blog.wikimedia.de/2019/05/09/new-testing-ground-for-wikibase-a-federal-agency-goes-on-an-expedition-in-the-wiki-universe/"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://blog.wikimedia.de/2019/05/09/new-testing-ground-for-wikibase-a-federal-agency-goes-on-an-expedition-in-the-wiki-universe/">https://blog.wikimedia.de/2019/05/09/new-testing-ground-for-wikibase-a-federal-agency-goes-on-an-expedition-in-the-wiki-universe/</a></p>
+                    </section>
+                    <section>
+                        <p>Werden Sie Teil einer spannenden Gesellschaft!</p>
+                        <p>Erstellen und verwalten Sie Ihre eigene Normdatei! (Oder kontrolliertes Vokabular…)</p>
+                    </section>
+                    <section>
+                        <h2>Wikibase Docker</h2>
+                        <p><a href="https://git.io/JeROB">https://git.io/JeROB</a></p>
+                        <p><small><a href="https://github.com/wmde/wikibase-docker">https://github.com/wmde/wikibase-docker</a></small></p>
+                    </section>
+                    <section>
+                        <h4>Wikibase Hilfeseiten</h4>
+                        <p><a href="https://www.mediawiki.org/wiki/Wikibase">https://www.mediawiki.org/wiki/Wikibase</a></p>
+                    </section>
+                    <section>
+                        <h4>Wikidata Testinstanz</h4>
+                        <p><a href="https://test.wikidata.org/">https://test.wikidata.org/</a></p>
+                        <h4>Wikidata FAQ</h4>
+                        <p><a href="https://www.wikidata.org/wiki/Help:FAQ">https://www.wikidata.org/wiki/Help:FAQ</a></p>
+                        <h4>Wikidata Hilfeseiten</h4>
+                        <p><a href="https://www.wikidata.org/wiki/Help:Contents">https://www.wikidata.org/wiki/Help:Contents</a></p>
+                        <aside class="notes">
+                            Caveat: Wikibase wird noch aktiv weiterentwickelt, manchmal ist die Dokumentation nicht auf dem aktuellen Stand bzw. es gibt widersprüchliche Informationen.
+                        </aside>
+                    </section>
+                </section>
+                
+                <!--
+                <section>
+                    <section>
+                        <h2>Wikidata Sandbox</h2>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Wikidata:Sandbox"></iframe>
+                        <small>Quelle: <a href="https://www.wikidata.org/wiki/Wikidata:Sandbox">wikidata.org/wiki/Wikidata:Sandbox</a></small>
+                    </section>
+                    <section>
+                        <h2>Wikidata Sandbox: Properties</h2>
+                        <iframe class="stretch" data-src="https://www.wikidata.org/wiki/Q4115189"></iframe>
+                        <small>Quelle: <a href="https://www.wikidata.org/wiki/Q4115189">Q4115189</a></small>
+                    </section>
+                </section>
+                -->
+                
+                <section>
+                    <h2>digiS-Jahreskonferenz 2019</h2>
+                    <h2>"WerteDaten – DatenWerte"</h2>
+                    <p>5. Dezember 2019, Zuse-Institut Berlin</p>
+                    <p>Mehr Infos:<br /><a href="https://www.digis-berlin.de/digis/veranstaltungen/digis-jahreskonferenzen/#tab-tab-4877-1-0-0-4877-0">https://tinyurl.com/digiS-JK2019</a></p>
+                </section>
+                    
+                <section>
+                    <h4>Referenzen &amp; weiterführende Literatur</h4>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.arl.org/resources/arl-whitepaper-on-wikidata/"></iframe>
+                        <p style="font-size: small">Quelle: <a href="https://www.arl.org/resources/arl-whitepaper-on-wikidata/">https://www.arl.org/resources/arl-whitepaper-on-wikidata/</a></p>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="https://www.oclc.org/research/publications/2019/oclcresearch-creating-library-linked-data-with-wikibase-project-passage.html"></iframe>
+                        <p style="font-size: small"><a href="https://doi.org/10.25333/faq3-ax08">DOI: 10.25333/faq3-ax08</a></p>
+                    </section>
+                    <section>
+                        <img src="images/books/Invisible_Women.jpg" height="500" alt="Invisible Women: Exposing Data Bias in a World Designed for Men (Caroline Criado Perez)"/>
+                        <p style="font-size: small">Quelle: <a href="https://www.penguin.co.uk/books/111/1113605/invisible-women/9781784741723.html">https://www.penguin.co.uk/books/111/1113605/invisible-women/9781784741723.html</a></p>
+                    </section>
+                    <section>
+                        <iframe class="stretch" data-src="http://www.artnews.com/2015/05/30/why-have-there-been-no-great-women-artists/"></iframe>
+                        <p style="font-size: small">Quelle: <a href="http://www.artnews.com/2015/05/30/why-have-there-been-no-great-women-artists/">http://www.artnews.com/2015/05/30/why-have-there-been-no-great-women-artists/</a></p>
+                        <aside class="notes">
+                            Ein Artikel von Linda Nochlin, ursprünglich in 1971 veröffentlicht.
+                        </aside>
+                    </section>
+                </section>
+ 
+                <section>
+                    <p style="font-weight: bold !important; font-size: 1.5em !important;">
+                        Vielen Dank<br />für Ihre Aufmerksamkeit!
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>Die Folien sind online:</p>
+                    <p style="font-weight: bold !important; font-size: 1.5em !important;">https://git.io/…</p>
+                    <p>https://zkuper.github.io/presentations/dmb-malweiber</p>
+                </section>
+                <section>
+                    <h2>CC BY 4.0</h2>
+                    <p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Namensnennung 4.0 International Lizenz</a>.
+                    </p>
+                </section>
+			</div>
+        </div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },                    
+                    { src: 'plugin/zoom-js/zoom.js', async: true }, // Zoom in and out with Alt+click
+                    { src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize("Normdaten, Wikidata, und die Malweiber | Herbsttreffen der DMB-FG Dokumentation, 2019-10-23 | Heinz-Günter Kuper | CC BY 4.0"); } }
+				],
+                // added by HGK
+                // Display presentation control arrows
+                controls: false,
+
+                // Help the user learn the controls by providing hints, for example by
+                // bouncing the down arrow when they first encounter a vertical slide
+                controlsTutorial: false,
+
+                // Determines where controls appear, "edges" or "bottom-right"
+                controlsLayout: 'bottom-right',
+
+                // Visibility rule for backwards navigation arrows; "faded", "hidden"
+                // or "visible"
+                controlsBackArrows: 'faded',
+
+                // Display a presentation progress bar
+                progress: true,
+
+                // Display the page number of the current slide
+                slideNumber: true,
+
+                // Add the current slide number to the URL hash so that reloading the
+                // page/copying the URL will return you to the same slide
+                hash: true,
+
+                // Push each slide change to the browser history. Implies `hash: true`
+                history: false,
+
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enables touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: false,
+
+                // Change the presentation direction to be RTL
+                rtl: false,
+
+                // See https://github.com/hakimel/reveal.js/#navigation-mode
+                navigationMode: 'default',
+
+                // Randomizes the order of slides each time the presentation loads
+                shuffle: false,
+
+                // Turns fragments on and off globally
+                fragments: true,
+
+                // Flags whether to include the current fragment in the URL,
+                // so that reloading brings you to the same fragment position
+                fragmentInURL: false,
+
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Flags if we should show a help overlay when the questionmark
+                // key is pressed
+                help: true,
+
+                // Flags if speaker notes should be visible to all viewers
+                showNotes: false,
+
+                // Global override for autoplaying embedded media (video/audio/iframe)
+                // - null: Media will only autoplay if data-autoplay is present
+                // - true: All media will autoplay, regardless of individual setting
+                // - false: No media will autoplay, regardless of individual setting
+                autoPlayMedia: null,
+
+                // Global override for preloading lazy-loaded iframes
+                // - null: Iframes with data-src AND data-preload will be loaded when within
+                //   the viewDistance, iframes with only data-src will be loaded when visible
+                // - true: All iframes with data-src will be loaded when within the viewDistance
+                // - false: All iframes with data-src will be loaded only when visible
+                preloadIframes: null,
+
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Use this method for navigation when auto-sliding
+                autoSlideMethod: Reveal.navigateNext,
+
+                // Specify the average time in seconds that you think you will spend
+                // presenting each slide. This is used to show a pacing timer in the
+                // speaker view
+                defaultTiming: 60,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Hide cursor if inactive
+                hideInactiveCursor: true,
+
+                // Time before the cursor is hidden (in ms)
+                hideCursorTime: 5000,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+
+                // Opens links in an iframe preview overlay
+                // Add `data-preview-link` and `data-preview-link="false"` to customise each link
+                // individually
+                previewLinks: false,
+
+                // Transition style
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Parallax background image
+                parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+                // Number of pixels to move the parallax background per slide
+                // - Calculated automatically unless specified
+                // - Set to 0 to disable movement along an axis
+                parallaxBackgroundHorizontal: null,
+                parallaxBackgroundVertical: null,
+
+                // The display mode that will be used to show slides
+                display: 'block'
+			});
+		</script>
+	</body>
+</html>

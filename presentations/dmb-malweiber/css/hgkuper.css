@@ -1,0 +1,17 @@
+.hangingindent {
+    padding-left: 22px ;
+    text-indent: -22px ;
+}
+
+/* https://stackoverflow.com/questions/15183704/reveal-js-background-color-choices
+=> in body: <section data-state="whitebkgnd">
+=> does not work for me
+html.whitebkgnd .state-background {
+    background: rgba(0, 0, 0, 0.8);
+}
+*/
+
+/* https://stackoverflow.com/questions/52820576/change-title-slide-color-in-reval-js-r-markdown-presentation */
+.slide-background:first-child {
+  background-color: #FFFFFF;
+}
